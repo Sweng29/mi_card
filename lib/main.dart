@@ -26,7 +26,7 @@ class Portfolio extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(20),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           CircleAvatar(
             radius: 80,
@@ -42,7 +42,7 @@ class Portfolio extends StatelessWidget {
                 fontFamily: 'Pacifico'),
           ),
           new Text(
-            'Full-Stack Developer',
+            'FULL-STACK DEVELOPER',
             style: TextStyle(
                 color: Colors.teal.shade100,
                 fontSize: 20,
@@ -50,50 +50,43 @@ class Portfolio extends StatelessWidget {
                 wordSpacing: 2.5,
                 fontFamily: 'Source Sans Pro'),
           ),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-            color: Colors.white,
-            child: Row(
-              children: <Widget>[
-                Icon(
-                  Icons.phone,
-                  color: Colors.teal,
-                ),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Text(
-                  '+92 332 3020495',
-                  style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
-                      color: Colors.teal.shade900),
-                )
-              ],
+          SizedBox(
+            height: 20.0,
+            width: 160.0,
+            child: Divider(
+              color: Colors.teal.shade100,
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(10.0),
+          Card(
             margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-            color: Colors.white,
-            child: Row(
-              children: <Widget>[
-                Icon(
-                  Icons.mail,
-                  color: Colors.teal,
-                ),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Text(
-                  'khosokashif@gmail.com',
-                  style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
-                      color: Colors.teal.shade900),
-                )
-              ],
+            child: ListTile(
+              leading: Icon(
+                Icons.phone,
+                color: Colors.teal,
+              ),
+              title: Text(
+                '+92 332 3020495',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    color: Colors.teal.shade900),
+              ),
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.mail,
+                color: Colors.teal,
+              ),
+              title: Text(
+                'khosokashif@gmail.com',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    color: Colors.teal.shade900),
+              ),
             ),
           ),
         ],
